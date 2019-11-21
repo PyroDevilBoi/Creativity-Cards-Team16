@@ -10,7 +10,7 @@ public class Movement : MonoBehaviour
     bool jump = false;
     public float runSpeed = 100f;
 
-    public Animator animator;
+   // public Animator animator;
    
     // Start is called before the first frame update
    
@@ -18,11 +18,11 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
+       // horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
         if (Input.GetKeyDown(KeyCode.Space))
             jump = true;
 
-        animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
+      //  animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
 
         
     }

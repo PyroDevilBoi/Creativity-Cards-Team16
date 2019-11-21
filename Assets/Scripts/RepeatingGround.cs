@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class RepeatingGround : MonoBehaviour
 {
-    public float speed;
+    public float speed=8;
 
     public float endX;
     public float startX;
+    public Animator animator;
+
 
     // Update is called once per frame
     void Update()
@@ -19,5 +21,6 @@ public class RepeatingGround : MonoBehaviour
             Vector2 pos = new Vector2(startX, transform.position.y);
             transform.position = pos;
         }
+        animator.SetFloat("Speed", Mathf.Abs(speed));
     }
 }
